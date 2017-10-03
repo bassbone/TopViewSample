@@ -47,19 +47,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdZ-nV-hQJ" customClass="FavScrollView" customModule="TopViewSample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="193" width="375" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdZ-nV-hQJ" customClass="FavScrollView" customModule="TopViewSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="189" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ggz-AN-LbS"/>
+                                </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人気のブランド" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sis-rV-6Nj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人気のブランド" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sis-rV-6Nj">
                                 <rect key="frame" x="126" y="148" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いま注目のトレンドワード TOP5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4em-Io-T5p">
+                                <rect key="frame" x="59" y="419" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベルト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g24-0S-Vhe">
+                                <rect key="frame" x="20" y="460" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koy-2t-aZT">
+                                <rect key="frame" x="263" y="455" width="92" height="30"/>
+                                <state key="normal" title="アイテム一覧"/>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="So0-jr-Dz0">
+                                <rect key="frame" x="1" y="493" width="375" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g24-0S-Vhe" firstAttribute="top" secondItem="4em-Io-T5p" secondAttribute="bottom" constant="20" id="04A-aE-b27"/>
+                            <constraint firstItem="koy-2t-aZT" firstAttribute="top" secondItem="4em-Io-T5p" secondAttribute="bottom" constant="15" id="2qS-nc-sSq"/>
+                            <constraint firstItem="RdZ-nV-hQJ" firstAttribute="top" secondItem="Sis-rV-6Nj" secondAttribute="bottom" constant="20" id="BGK-QG-HqI"/>
+                            <constraint firstItem="g24-0S-Vhe" firstAttribute="leading" secondItem="YT6-mt-Sdp" secondAttribute="leading" constant="20" id="GAx-aS-6Xy"/>
+                            <constraint firstItem="Sis-rV-6Nj" firstAttribute="centerX" secondItem="YT6-mt-Sdp" secondAttribute="centerX" id="IrD-XS-jfw"/>
+                            <constraint firstItem="Sis-rV-6Nj" firstAttribute="top" secondItem="YT6-mt-Sdp" secondAttribute="top" constant="128" id="SEX-IA-KYx"/>
+                            <constraint firstItem="4em-Io-T5p" firstAttribute="top" secondItem="RdZ-nV-hQJ" secondAttribute="bottom" constant="30" id="W1p-b9-Qpv"/>
+                            <constraint firstItem="4em-Io-T5p" firstAttribute="centerX" secondItem="YT6-mt-Sdp" secondAttribute="centerX" id="ZbO-LP-AfK"/>
+                            <constraint firstItem="YT6-mt-Sdp" firstAttribute="trailing" secondItem="koy-2t-aZT" secondAttribute="trailing" constant="20" id="bHZ-z7-qOu"/>
+                            <constraint firstItem="So0-jr-Dz0" firstAttribute="top" secondItem="koy-2t-aZT" secondAttribute="bottom" constant="20" id="fHP-Sn-i3U"/>
+                            <constraint firstItem="RdZ-nV-hQJ" firstAttribute="width" secondItem="x5Z-gA-D8W" secondAttribute="width" id="sb9-Ex-6nq"/>
+                            <constraint firstItem="So0-jr-Dz0" firstAttribute="width" secondItem="x5Z-gA-D8W" secondAttribute="width" id="srE-CF-aQX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YT6-mt-Sdp"/>
                     </view>
                     <connections>
